@@ -1,0 +1,76 @@
+enum FitnessGoal {
+  WEIGHT_LOSS
+  MUSCLE_GAIN
+  ENDURANCE
+  STRENGTH
+  MAINTENANCE
+  TONING
+}
+
+enum ActivityLevel {
+  SEDENTARY
+  LIGHTLY_ACTIVE
+  MODERATELY_ACTIVE
+  VERY_ACTIVE
+  EXTREMELY_ACTIVE
+}
+
+// User Model
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  username  String   @unique
+  role      String   @default("WorkoutUser")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+
+  // Relations
+  profile         Profile?
+  checkIns        CheckIn[]
+  exercises       Exercise[]       @relation("CreatedExercises")
+  workoutSessions WorkoutSession[]
+  workoutPrograms WorkoutProgram[]
+  progressPhotos  ProgressPhoto[]  @relation("UserProgressPhotos")
+
+  @@index([email], name: "idx_user_email")
+}
+
+// Profile Model
+model Profile {
+  id                         String         @id @default(uuid())
+  userId                     String         @unique
+  height                     Float?
+  weight                     Float?
+  fitnessGoal                FitnessGoal?
+  activityLevel              ActivityLevel?
+  currentWeight              Float?
+  currentBodyFatPercentage   Float?
+  currentArmMeasurement      Float?
+  currentChestMeasurement    Float?
+  currentShoulderMeasurement Float?
+  currentNeckMeasurement     Float?
+  currentWaistMeasurement    Float?
+  currentHipMeasurement      Float?
+  currentThighMeasurement    Float?
+  currentCalfMeasurement     Float?
+  createdAt                  DateTime       @default(now())
+  updatedAt                  DateTime       @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([userId], name: "idx_profile_user")
+}
+
+model ProgressPhoto {
+  id        String   @id @default(uuid())
+  userId    String
+  programId String?
+  phaseId   String?
+  photoUrl  String
+  createdAt DateTime @default(now())
+
+  user           User            @relation("UserProgressPhotos", fields: [userId], references: [id])
+  workoutProgram WorkoutProgram? @relation(fields: [programId], references: [id])
+  workoutPhase   WorkoutPhase?   @relation(fields: [phaseId], references: [id])
+}

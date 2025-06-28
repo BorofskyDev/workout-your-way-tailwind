@@ -1,0 +1,25 @@
+model CheckIn {
+  id                    String   @id @default(uuid())
+  userId                String
+  programId             String?
+  phaseId               String?
+  weight                Float?
+  bodyFatPercentage     Float?
+  armCircumference      Float?
+  chestCircumference    Float?
+  shoulderCircumference Float?
+  neckCircumference     Float?
+  waistCircumference    Float?
+  hipCircumference      Float?
+  thighCircumference    Float?
+  calfCircumference     Float?
+  notes                 String?
+  createdAt             DateTime @default(now())
+
+  user           User            @relation(fields: [userId], references: [id])
+  workoutProgram WorkoutProgram? @relation(fields: [programId], references: [id])
+  workoutPhase   WorkoutPhase?   @relation("WorkoutPhaseCheckIns", fields: [phaseId], references: [id])
+
+  @@index([userId], name: "idx_checkin_user")
+  @@index([createdAt], name: "idx_checkin_date")
+}
