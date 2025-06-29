@@ -1,0 +1,9 @@
+:root {
+    --text-primary: var(--color-gray-900);
+
+
+}
+
+[data-theme='dark'] {
+    --text-primary: var(--color-gray-100);
+}

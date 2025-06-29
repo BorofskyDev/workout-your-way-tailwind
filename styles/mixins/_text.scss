@@ -1,0 +1,9 @@
+@mixin text(
+    $font-size: var(--fs-300),
+    $line-height: var(--lh-300),
+    $font-weight: var(--fw-normal)
+) {
+    margin: var(--margin-auto);
+    
+    font-size: $font-size;
+}

@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import styles from './Heading.module.scss'
 
 type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
@@ -11,13 +12,6 @@ interface HeadingProps {
   children: React.ReactNode
 }
 
-const variantClasses: Record<HeadingVariant, string> = {
-  page: '',
-  section: '',
-  subsection: '',
-  'container-large': '',
-}
-
 export const Heading: React.FC<HeadingProps> = ({
   element: Element,
   variant,
@@ -25,7 +19,9 @@ export const Heading: React.FC<HeadingProps> = ({
   children,
 }) => {
   return (
-    <Element className={clsx(variantClasses[variant], className)}>
+    <Element
+      className={clsx(styles.heading, styles[`heading--${variant}`], className)}
+    >
       {children}
     </Element>
   )

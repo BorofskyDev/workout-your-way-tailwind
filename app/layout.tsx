@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { atkinsonMono, atkinsonNext } from './fonts/fonts'
-import './globals.css'
 import { ThemeProvider } from 'next-themes'
+import '@/styles/globals.scss'
 
 export const metadata: Metadata = {
   title: 'Create Next App',

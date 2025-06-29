@@ -1,0 +1,8 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/functions/' as *;
+
+.heading {
+    &--page {
+        @include heading-style(1);
+    }
+}

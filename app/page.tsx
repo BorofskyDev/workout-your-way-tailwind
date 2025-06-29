@@ -1,9 +1,5 @@
-import { ThemeToggle } from '@/components/ui'
+import { SplashPageComponent } from '@/components/pages'
 
 export default function Home() {
-  return (
-    <div className='h-full w-full grid items-center'>
-      <ThemeToggle />
-    </div>
-  )
+  return <SplashPageComponent />
 }

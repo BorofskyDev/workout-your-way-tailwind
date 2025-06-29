@@ -1,0 +1,14 @@
+@mixin heading($weight, $size, $line-height, $text-transform: capitalize) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  text-transform: $text-transform;
+}
+
+@mixin heading-style($level) {
+  @if $level == 1 {
+    @include heading(var(--fw-black), var(--fs-900), var(--lh-900));
+    min-width: var(--full-percent);
+    text-align: center;
+  }
+}

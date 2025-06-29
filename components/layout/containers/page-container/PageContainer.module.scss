@@ -1,0 +1,10 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/functions/' as *;
+
+.pageContainer {
+  height: var(--full-percent);
+  width: var(--full-percent);
+  max-width: var(--page-max);
+  margin: var(--margin-auto);
+  padding: var(--page-padding);
+}
