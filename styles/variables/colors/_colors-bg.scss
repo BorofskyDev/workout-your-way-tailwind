@@ -1,0 +1,56 @@
+:root { 
+    // generics
+
+    --bg-neutral: hsl(var(--gray-100));
+    --bg-blue: hsl(var(--blue-100));
+    --bg-green: hsl(var(--green-100));
+    --bg-red: hsl(var(--red-100));
+    --bg-purple: hsl(var(--purple-100));
+    --bg-yellow: hsl(var(--yellow-100));
+    --bg-orange: hsl(var(--orange-100));
+    --bg-pink: hsl(var(--pink-100));
+    --bg-aqua: hsl(var(--aqua-100));
+
+    // dedicated
+    --bg-primary: hsl(var(--green-100));
+    --bg-secondary: hsl(var(--gray-100));
+
+    // buttons
+    --bg-btn-primary: hsl(var(--aqua-400));
+    --bg-btn-primary-hover: hsl(var(--aqua-100));
+
+    --bg-btn-secondary: hsl(var(--orange-400));
+    --bg-btn-secondary-hover: hsl(var(--orange-100));
+
+    --bg-btn-disabled: hsl(var(--gray-400));
+
+}
+
+
+[data-theme="dark"] {
+    // generics
+
+    --bg-neutral: hsl(var(--gray-900));
+    --bg-blue: hsl(var(--blue-900));
+    --bg-green: hsl(var(--green-900));
+    --bg-red: hsl(var(--red-900));
+    --bg-purple: hsl(var(--purple-900));
+    --bg-yellow: hsl(var(--yellow-900));
+    --bg-orange: hsl(var(--orange-900));
+    --bg-pink: hsl(var(--pink-900));
+    --bg-aqua: hsl(var(--aqua-900));
+
+
+    // dedicated
+    --bg-primary: hsl(var(--blue-900));
+    --bg-secondary: hsl(var(--purple-900));
+
+    // buttons
+    --bg-btn-primary: hsl(var(--green-700));
+    --bg-btn-primary-hover: hsl(var(--green-900));
+
+    --bg-btn-secondary: hsl(var(--pink-600));
+    --bg-btn-secondary-hover: hsl(var(--pink-900));
+
+    --bg-btn-disabled: hsl(var(--gray-600));
+}
