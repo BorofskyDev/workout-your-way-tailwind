@@ -1,0 +1,6 @@
+@use '@/styles/functions' as *;
+@use '@/styles/mixins' as *;
+
+.columnSection {
+  @include flex-center(column, var(--heading-gap-2xl));
+}

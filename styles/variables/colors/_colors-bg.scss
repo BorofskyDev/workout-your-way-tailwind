@@ -24,6 +24,14 @@
 
     --bg-btn-disabled: hsl(var(--gray-400));
 
+    --bg-cta-btn: hsl(var(--aqua-300));
+    --bg-cta-btn-hover: hsl(var(--aqua-100));
+
+    --bg-primary-btn: hsl(var(--yellow-300));
+    --bg-primary-btn-hover: hsl(var(--yellow-100));
+
+    --bg-secondary-btn: hsl(var(--orange-300));
+    --bg-secondary-btn-hover: hsl(var(--orange-100));
 }
 
 
@@ -53,4 +61,8 @@
     --bg-btn-secondary-hover: hsl(var(--pink-900));
 
     --bg-btn-disabled: hsl(var(--gray-600));
+
+    --bg-gradient-1: hsl(var(--green-500));
+    --bg-gradient-2: hsl(var(--pink-500));
+    --bg-gradient-3: hsl(var(--blue-500));
 }

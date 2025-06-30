@@ -1,0 +1,16 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/functions' as *;
+
+.linkBtn {
+    &--cta { 
+        @include link-btn-styles(1);
+    }
+
+    &--primary { 
+        @include link-btn-styles(2);
+    }
+
+    &--secondary { 
+        @include link-btn-styles(3);
+    }
+}

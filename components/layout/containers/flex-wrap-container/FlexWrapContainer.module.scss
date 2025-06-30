@@ -1,0 +1,6 @@
+@use '@/styles/functions' as *;
+@use '@/styles/mixins' as *;
+
+.flexWrapContainer { 
+    @include flex-wrap(var(--container-gap-lg));
+}

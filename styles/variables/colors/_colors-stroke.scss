@@ -1,0 +1,11 @@
+:root { 
+    --stroke-cta: hsl(var(--orange-500));
+    --stroke-primary: hsl(var(--purple-500));
+    --stroke-secondary: hsl(var(--aqua-600));
+}
+
+[data-theme="dark"] {
+    --stroke-cta: hsl(var(--red-500));
+    --stroke-primary: hsl(var(--pink-500));
+    --stroke-secondary: hsl(var(--green-500));
+}

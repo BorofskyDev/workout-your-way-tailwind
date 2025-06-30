@@ -4,6 +4,12 @@
 :root {
     --full-percent: 100%;
     --full-dynamic: 100dvw;
+
     --page-max: #{px-to-rem(1280)};
+
     --paragraph-max: #{px-to-ch(680)};
+
+    --btn-w-xl: #{px-to-rem(260)};
+    --btn-w-lg: #{px-to-rem(200)};
+    --btn-w-md: #{px-to-rem(180)};
 }

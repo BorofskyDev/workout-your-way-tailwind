@@ -2,21 +2,34 @@
 @use '@/styles/functions/' as *;
 
 :root {
-    --page-padding: #{px-to-rem(24)} #{px-to-rem(44)};
+  --page-padding: #{px-to-rem(24)} #{px-to-rem(44)};
 
-    @include breakpoint(md) {
-        --page-padding: #{px-to-rem(32)} #{px-to-rem(64)};
-    }
+  --btn-padding-xl: #{px-to-rem(8)} #{px-to-rem(18)};
+  --btn-padding-lg: #{px-to-rem(6)} #{px-to-rem(16)};
+  --btn-padding-md: #{px-to-rem(4)} #{px-to-rem(12)};
+  --btn-padding-sm: #{px-to-rem(2)} #{px-to-rem(8)};
 
-    @include breakpoint(lg) {
-        --page-padding: #{px-to-rem(40)} #{px-to-rem(120)};
-    }
+  @include breakpoint(md) {
+    --page-padding: #{px-to-rem(32)} #{px-to-rem(64)};
+  }
 
-    @include breakpoint(xl) {
-        --page-padding: #{px-to-rem(48)} #{px-to-rem(180)};
-    }
+  @include breakpoint(lg) {
+    --page-padding: #{px-to-rem(40)} #{px-to-rem(120)};
+    --btn-padding-xl: #{px-to-rem(10)} #{px-to-rem(20)};
+    --btn-padding-lg: #{px-to-rem(8)} #{px-to-rem(18)};
+    --btn-padding-md: #{px-to-rem(6)} #{px-to-rem(16)};
+    --btn-padding-sm: #{px-to-rem(4)} #{px-to-rem(12)};
+  }
 
-    @include breakpoint(2xl) {
-        --page-padding: #{px-to-rem(64)} #{px-to-rem(240)};
-    }
+  @include breakpoint(xl) {
+    --page-padding: #{px-to-rem(48)} #{px-to-rem(180)};
+  }
+
+  @include breakpoint(2xl) {
+    --page-padding: #{px-to-rem(64)} #{px-to-rem(240)};
+    --btn-padding-xl: #{px-to-rem(12)} #{px-to-rem(24)};
+    --btn-padding-lg: #{px-to-rem(10)} #{px-to-rem(20)};
+    --btn-padding-md: #{px-to-rem(8)} #{px-to-rem(18)};
+    --btn-padding-sm: #{px-to-rem(6)} #{px-to-rem(16)};
+  }
 }

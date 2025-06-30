@@ -1,0 +1,86 @@
+@use './breakpoint' as *;
+@use './flex' as *;
+@use '@/styles/functions' as *;
+
+@mixin link-btn(
+  $width,
+  $padding,
+  $borderColor,
+  $bgColor,
+  $fs,
+  $strokeColor,
+  $hoverBg
+) {
+  min-width: fit-content;
+  max-width: $width;
+  padding: $padding;
+  border: var(--border-4);
+  border-color: $borderColor;
+  border-radius: var(--br-8);
+  box-shadow: var(--shadow-md);
+  background-color: $bgColor;
+  font-family: var(--font-atkinson-mono);
+  font-size: $fs;
+  font-weight: var(--fw-bold);
+    text-align: center;
+    text-transform: capitalize;
+  transition: var(--transition-main);
+  @include flex-center(row, var(--gap-8));
+
+  & svg {
+    height: #{px-to-rem(48)};
+    width: #{px-to-rem(48)};
+    fill: $strokeColor;
+    stroke: $strokeColor;
+  }
+
+  &:hover,
+  &:focus-visible {
+    box-shadow: var(--shadow-md-hover);
+    transform: var(--scale);
+    background-color: $hoverBg;
+  }
+}
+
+@mixin link-btn-styles($level) {
+  @if $level == 1 {
+    @include link-btn(
+      var(--btn-w-xl),
+      var(--btn-padding-xl),
+      var(--border-cta),
+      var(--bg-cta-btn),
+      var(--fs-500),
+      var(--stroke-cta),
+      var(--bg-cta-btn-hover)
+    );
+  }
+  @if $level == 2 {
+    @include link-btn(
+      var(--btn-w-lg),
+      var(--btn-padding-lg),
+      var(--border-primary),
+      var(--bg-primary-btn),
+        var(--fs-400),
+      var(--stroke-primary),
+      var(--bg-primary-btn-hover)
+    );
+    color: var(--link-text);
+
+    &:focus-visible,
+    &:hover {
+      color: var(--link-text-hover);
+    }
+  }
+
+  @if $level == 3 {
+    @include link-btn(
+      var(--btn-w-md),
+      var(--btn-padding-md),
+      var(--border-secondary),
+      var(--bg-secondary-btn),
+        var(--fs-400),
+      var(--stroke-secondary),
+      var(--bg-secondary-btn-hover)
+    );
+  }
+}

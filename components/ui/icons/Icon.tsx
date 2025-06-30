@@ -13,7 +13,7 @@ export interface IconProps {
 export function Icon({
   path,
   className = '',
-  viewBox = '0 0 50 50',
+  viewBox = '0 0 64 64',
   title,
   description,
   role = 'presentation',

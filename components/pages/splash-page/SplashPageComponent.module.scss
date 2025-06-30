@@ -1,0 +1,11 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/functions' as *;
+
+.splashPageComponent {
+  @include flex-center(column, var(--page-section-gap));
+    
+
+
+
+
+}

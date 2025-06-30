@@ -1,0 +1,5 @@
+@use '@/styles/functions' as *;
+
+:root {
+    --br-8: #{px-to-rem(8)};
+}

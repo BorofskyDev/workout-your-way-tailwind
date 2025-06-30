@@ -1,0 +1,12 @@
+:root { 
+    --border-cta: hsl(var(--orange-500));
+    --border-primary: hsl(var(--purple-500));
+    --border-secondary: hsl(var(--aqua-500));
+}
+
+
+[data-theme="dark"] {
+    --border-cta: hsl(var(--red-500));
+    --border-primary: hsl(var(--pink-500));
+    --border-secondary: hsl(var(--green-500));
+}

@@ -1,0 +1,38 @@
+@use '@/styles/functions' as *;
+@use '@/styles/mixins' as *;
+
+:root {
+  --gap-2: #{px-to-rem(2)};
+  --gap-4: #{px-to-rem(4)};
+  --gap-6: #{px-to-rem(6)};
+  --gap-8: #{px-to-rem(8)};
+  --gap-10: #{px-to-rem(10)};
+  --gap-12: #{px-to-rem(12)};
+  --gap-16: #{px-to-rem(16)};
+  --gap-20: #{px-to-rem(20)};
+  --gap-24: #{px-to-rem(24)};
+
+  --page-section-gap: #{px-to-rem(64)};
+
+  --heading-gap-2xl: #{px-to-rem(48)};
+
+  --container-gap-lg: #{px-to-rem(32)};
+
+  @include breakpoint(md) {
+    --page-section-gap: #{px-to-rem(80)};
+    --heading-gap-2xl: #{px-to-rem(64)};
+    --container-gap-lg: #{px-to-rem(40)};
+  }
+
+  @include breakpoint(lg) {
+    --page-section-gap: #{px-to-rem(100)};
+    --heading-gap-2xl: #{px-to-rem(80)};
+    --container-gap-lg: #{px-to-rem(60)};
+  }
+
+  @include breakpoint(xl) {
+    --page-section-gap: #{px-to-rem(120)};
+    --heading-gap-2xl: #{px-to-rem(100)};
+    --container-gap-lg: #{px-to-rem(80)};
+  }
+}
