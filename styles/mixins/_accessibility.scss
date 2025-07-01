@@ -1,14 +1,14 @@
 @mixin focused {
     &:focus-visible {
-        outline: 4px ;
+        outline-width: 4px;
         outline-offset: 4px;
-        outline-color: hsl(var(--blue-400));
+        outline-color: hsl(var(--pink-500));
     }
     
-    &:focus:not(:focus-visible) {
-        outline: none;
-        box-shadow: none;
-    }
+    // &:focus:not(:focus-visible) {
+    //     outline: none;
+    //     box-shadow: none;
+    // }
 }
 
 @mixin visually-hidden {

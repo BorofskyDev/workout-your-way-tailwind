@@ -1,0 +1,10 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/functions' as *;
+
+.loginPage {
+    @include flex-center(column, var(--page-section-gap));
+
+    &__form { 
+        @include flex-center(column, var(--container-gap-md));
+    }
+}

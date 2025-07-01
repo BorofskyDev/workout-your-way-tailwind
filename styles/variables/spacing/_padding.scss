@@ -9,8 +9,12 @@
   --btn-padding-md: #{px-to-rem(4)} #{px-to-rem(12)};
   --btn-padding-sm: #{px-to-rem(2)} #{px-to-rem(8)};
 
+  --input-padding: #{px-to-rem(12)} #{px-to-rem(16)};
+
   @include breakpoint(md) {
     --page-padding: #{px-to-rem(32)} #{px-to-rem(64)};
+
+    --input-padding: #{px-to-rem(14)} #{px-to-rem(20)};
   }
 
   @include breakpoint(lg) {
@@ -19,6 +23,8 @@
     --btn-padding-lg: #{px-to-rem(8)} #{px-to-rem(18)};
     --btn-padding-md: #{px-to-rem(6)} #{px-to-rem(16)};
     --btn-padding-sm: #{px-to-rem(4)} #{px-to-rem(12)};
+
+    --input-padding: #{px-to-rem(16)} #{px-to-rem(24)};
   }
 
   @include breakpoint(xl) {

@@ -1,3 +1,4 @@
+@use './accessibility' as *;
 @use './breakpoint' as *;
 @use './flex' as *;
 @use '@/styles/functions' as *;
@@ -34,12 +35,17 @@
     stroke: $strokeColor;
   }
 
+  &:focus-visible { 
+    @include focused;
+  }
+
   &:hover,
   &:focus-visible {
     box-shadow: var(--shadow-md-hover);
     transform: var(--scale);
     background-color: $hoverBg;
   }
+ 
 }
 
 @mixin link-btn-styles($level) {

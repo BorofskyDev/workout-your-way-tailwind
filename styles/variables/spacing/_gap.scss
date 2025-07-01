@@ -17,22 +17,28 @@
   --heading-gap-2xl: #{px-to-rem(48)};
 
   --container-gap-lg: #{px-to-rem(32)};
+  --container-gap-md: #{px-to-rem(24)};
 
   @include breakpoint(md) {
     --page-section-gap: #{px-to-rem(80)};
     --heading-gap-2xl: #{px-to-rem(64)};
+    
     --container-gap-lg: #{px-to-rem(40)};
+    --container-gap-md: #{px-to-rem(32)};
   }
 
   @include breakpoint(lg) {
     --page-section-gap: #{px-to-rem(100)};
     --heading-gap-2xl: #{px-to-rem(80)};
+
     --container-gap-lg: #{px-to-rem(60)};
+    --container-gap-md: #{px-to-rem(48)};
   }
 
   @include breakpoint(xl) {
     --page-section-gap: #{px-to-rem(120)};
     --heading-gap-2xl: #{px-to-rem(100)};
     --container-gap-lg: #{px-to-rem(80)};
+    --container-gap-md: #{px-to-rem(64)};
   }
 }
