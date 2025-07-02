@@ -27,11 +27,13 @@
     --bg-cta-btn: hsl(var(--aqua-300));
     --bg-cta-btn-hover: hsl(var(--aqua-100));
 
-    --bg-primary-btn: hsl(var(--yellow-300));
-    --bg-primary-btn-hover: hsl(var(--yellow-100));
+    --bg-primary-btn: hsl(var(--orange-300));
+    --bg-primary-btn-hover: hsl(var(--orange-100));
 
     --bg-secondary-btn: hsl(var(--orange-300));
     --bg-secondary-btn-hover: hsl(var(--orange-100));
+
+    --bg-error: hsl(var(--red-200));
 }
 
 
@@ -65,4 +67,6 @@
     --bg-gradient-1: hsl(var(--green-500));
     --bg-gradient-2: hsl(var(--pink-500));
     --bg-gradient-3: hsl(var(--blue-500));
+
+    --bg-error: hsl(var(--red-900));
 }

@@ -10,6 +10,7 @@ export type TextVariant =
   | 'label'
   | 'note'
   | 'accent'
+  | 'error'
 
 interface PTextProps extends React.HTMLAttributes<HTMLParagraphElement> {
   variant?: TextVariant
@@ -25,7 +26,7 @@ export const PText: React.FC<PTextProps> = ({
 }) => {
   return (
     <p
-      className={`${styles.text} ${styles[`text--${variant}`]} ${className}`}
+      className={`${styles.text} ${styles[`text__${variant}`]} ${className}`}
       {...rest}
     >
       {children}

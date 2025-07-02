@@ -2,15 +2,22 @@
     --text-primary: hsl(var(--gray-900));
     --text-secondary: hsl(var(--gray-700));
 
+    --text-color-primary: hsl(var(--aqua-800));
+
     --link-text: hsl(var(--blue-500));
     --link-text-hover: hsl(var(--blue-900));
-
+    
+    --text-error: hsl(var(--red-800));
 }
 
 [data-theme='dark'] {
     --text-primary: hsl(var(--gray-100));
     --text-secondary: hsl(var(--gray-300));
 
+    --text-color-primary: hsl(var(--aqua-100));
+
     --link-text: hsl(var(--green-300));
     --link-text-hover: hsl(var(--green100));
+
+    --text-error: hsl(var(--red-100));
 }

@@ -28,6 +28,7 @@
     width: var(--full-percent);
     height: #{px-to-rem(3)};
     transition: var(--transition-main);
+    opacity: 0;
   }
 
   &::before {
@@ -43,21 +44,24 @@
   }
 
   &:hover::before,
+  &:focus-visible::before,
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+    transition: var(--transition-main);
+  }
+
+  &:hover::before,
   &:focus-visible::before {
     left: 0;
-    transition: var(--transition-main);
   }
 
   &:hover::after,
   &:focus-visible::after {
     right: 0;
-    transition: var(--transition-main);
   }
 
   &__icon {
-    // position: absolute;
-    // top: -#{px-to-rem(14)};
-    // right: -#{px-to-rem(20)};
     height: #{px-to-rem(24)};
     width: #{px-to-rem(24)};
   }

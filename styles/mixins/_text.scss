@@ -4,6 +4,25 @@
     $font-weight: var(--fw-normal)
 ) {
     margin: var(--margin-auto);
-    
+    max-width: var(--paragraph-max);
     font-size: $font-size;
+    line-height: $line-height;
+}
+
+
+@mixin text-style($level) {
+    @if $level == 1 {
+        @include text;
+    }
+
+    @else if $level == 2 {
+        @include text($font-size: var(--fs-400), $font-weight: var(--fw-bold));
+        padding: var(--container-padding-xs);
+        border: var(--border-4);
+        border-color: var(--border-error);
+        border-radius: var(--br-6);
+        box-shadow: var(--shadow-display-lg);
+        background-color: var(--bg-error);
+        color: var(--text-error);
+    }
 }

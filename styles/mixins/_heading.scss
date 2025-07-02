@@ -7,8 +7,9 @@
 
 @mixin heading-style($level) {
   @if $level == 1 {
-    @include heading(var(--fw-black), var(--fs-900), var(--lh-900));
+    @include heading(var(--fw-black), var(--fs-900), var(--lh-900), uppercase);
     min-width: var(--full-percent);
     text-align: center;
+    color: var(--text-color-primary)
   }
 }
