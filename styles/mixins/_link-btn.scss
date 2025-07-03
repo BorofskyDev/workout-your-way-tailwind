@@ -17,14 +17,14 @@
   padding: $padding;
   border: var(--border-4);
   border-color: $borderColor;
-  border-radius: var(--br-8);
+  border-radius: var(--br-12);
   box-shadow: var(--shadow-md);
   background-color: $bgColor;
   font-family: var(--font-atkinson-mono);
   font-size: $fs;
   font-weight: var(--fw-bold);
-    text-align: center;
-    text-transform: capitalize;
+  text-align: center;
+  text-transform: capitalize;
   transition: var(--transition-main);
   @include flex-center(row, var(--gap-8));
 
@@ -35,7 +35,7 @@
     stroke: $strokeColor;
   }
 
-  &:focus-visible { 
+  &:focus-visible {
     @include focused;
   }
 
@@ -45,7 +45,6 @@
     transform: var(--scale);
     background-color: $hoverBg;
   }
- 
 }
 
 @mixin link-btn-styles($level) {
@@ -66,7 +65,7 @@
       var(--btn-padding-lg),
       var(--border-primary),
       var(--bg-primary-btn),
-        var(--fs-400),
+      var(--fs-400),
       var(--stroke-primary),
       var(--bg-primary-btn-hover)
     );
@@ -84,9 +83,21 @@
       var(--btn-padding-md),
       var(--border-secondary),
       var(--bg-secondary-btn),
-        var(--fs-400),
+      var(--fs-400),
       var(--stroke-secondary),
       var(--bg-secondary-btn-hover)
     );
+  }
+
+  @if $level == 4 {
+    @include link-btn(
+      var(--btn-w-sm),
+      var(--btn-padding-sm),
+      var(--border-link),
+      var(--bg-link),
+      var(--fs-300),
+      var(--stroke-link),
+      var(--bg-link-hover)
+    )
   }
 }

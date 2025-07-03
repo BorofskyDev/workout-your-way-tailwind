@@ -1,0 +1,11 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/functions' as *;
+
+
+.infoContainer {
+    @include flex-center(column, var(--element-gap-sm));
+
+    @container (min-width: #{px-to-ch(340)}) {
+        @include flex-center(row, var(--element-gap-sm));
+    }
+}

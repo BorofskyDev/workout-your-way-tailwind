@@ -5,4 +5,8 @@
     &--page {
         @include heading-style(1);
     }
+
+    &--card {
+        @include heading-style(2);
+    }
 }

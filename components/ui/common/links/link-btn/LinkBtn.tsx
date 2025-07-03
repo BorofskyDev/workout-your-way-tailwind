@@ -6,7 +6,7 @@ import styles from './LinkBtn.module.scss'
 interface LinkBtnProps {
   href: string
   children: React.ReactNode
-  variant: 'primary' | 'secondary' | 'cta'
+  variant: 'primary' | 'secondary' | 'cta' | 'small'
   className?: string
   icon?: string
   strokeColor?: string

@@ -1,0 +1,16 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/functions' as *;
+
+.oneToTwoColSection {
+    min-width: #{px-to-ch(340)};
+    max-width: #{px-to-ch(1280)};
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--container-gap-lg);
+    place-items: center;
+
+    @include breakpoint(md) {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}

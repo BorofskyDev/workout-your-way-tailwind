@@ -5,5 +5,12 @@
         @include text-style(1);
     }
 
+    &__error {
+        @include text-style(2);
+    }
+
+    &__label {
+        @include text-style(3);
+    }
 
 }

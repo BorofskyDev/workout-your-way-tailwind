@@ -13,4 +13,8 @@
     &--secondary { 
         @include link-btn-styles(3);
     }
+
+    &--small {
+        @include link-btn-styles(4);
+    }
 }

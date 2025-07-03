@@ -12,4 +12,9 @@
     text-align: center;
     color: var(--text-color-primary)
   }
+
+  @if $level == 2 {
+    @include heading(var(--fw-semibold), var(--fs-600), var(--lh-600));
+    
+  }
 }

@@ -1,0 +1,12 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/functions' as *;
+
+.dailyView {
+    container-type: inline-size;
+    width: var(--full-percent);
+    &__column {
+        width: var(--full-percent);
+        @include flex-center(column, var(--container-gap-sm));
+        
+    }
+}

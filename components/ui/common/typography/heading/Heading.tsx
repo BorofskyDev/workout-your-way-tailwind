@@ -3,7 +3,12 @@ import styles from './Heading.module.scss'
 
 type HeadingElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 
-type HeadingVariant = 'page' | 'section' | 'subsection' | 'container-large'
+type HeadingVariant =
+  | 'page'
+  | 'section'
+  | 'subsection'
+  | 'container-large'
+  | 'card'
 
 interface HeadingProps {
   element: HeadingElement

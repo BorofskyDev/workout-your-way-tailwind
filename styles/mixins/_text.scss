@@ -1,28 +1,35 @@
 @mixin text(
-    $font-size: var(--fs-300),
-    $line-height: var(--lh-300),
-    $font-weight: var(--fw-normal)
+  $font-size: var(--fs-300),
+  $line-height: var(--lh-300),
+  $font-weight: var(--fw-normal)
 ) {
-    margin: var(--margin-auto);
-    max-width: var(--paragraph-max);
-    font-size: $font-size;
-    line-height: $line-height;
+  margin: var(--margin-auto);
+  max-width: var(--paragraph-max);
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
 }
 
-
 @mixin text-style($level) {
-    @if $level == 1 {
-        @include text;
-    }
+  @if $level == 1 {
+    @include text;
+  }
 
-    @else if $level == 2 {
-        @include text($font-size: var(--fs-400), $font-weight: var(--fw-bold));
-        padding: var(--container-padding-xs);
-        border: var(--border-4);
-        border-color: var(--border-error);
-        border-radius: var(--br-6);
-        box-shadow: var(--shadow-display-lg);
-        background-color: var(--bg-error);
-        color: var(--text-error);
-    }
+  @if $level == 2 {
+    @include text($font-size: var(--fs-400), $font-weight: var(--fw-bold));
+    padding: var(--container-padding-xs);
+    border: var(--border-4);
+    border-color: var(--border-error);
+    border-radius: var(--br-6);
+    box-shadow: var(--shadow-display-lg);
+    background-color: var(--bg-error);
+    color: var(--text-error);
+  }
+  @if $level == 3 {
+    @include text(
+      $font-size: var(--fs-400),
+      $line-height: var(--lh-400),
+      $font-weight: var(--fw-medium)
+    );
+  }
 }

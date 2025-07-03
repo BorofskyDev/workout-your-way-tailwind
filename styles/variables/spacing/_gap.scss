@@ -18,6 +18,15 @@
 
   --container-gap-lg: #{px-to-rem(32)};
   --container-gap-md: #{px-to-rem(24)};
+  --container-gap-sm: #{px-to-rem(16)};
+  
+  --col-to-row-gap-sm: #{px-to-rem(16)};
+  --col-to-row-gap-md: #{px-to-rem(24)};
+  --col-to-row-gap-lg: #{px-to-rem(32)};
+
+  --element-gap-sm: #{px-to-ch(8)};
+  --element-gap-md: #{px-to-ch(12)};
+  --element-gap-lg: #{px-to-ch(16)};
 
   @include breakpoint(md) {
     --page-section-gap: #{px-to-rem(80)};
@@ -25,6 +34,11 @@
     
     --container-gap-lg: #{px-to-rem(40)};
     --container-gap-md: #{px-to-rem(32)};
+    --container-gap-sm: #{px-to-rem(24)};
+
+    --col-to-row-gap-sm: #{px-to-rem(20)};
+    --col-to-row-gap-md: #{px-to-rem(32)};
+    --col-to-row-gap-lg: #{px-to-rem(40)};
   }
 
   @include breakpoint(lg) {
@@ -33,6 +47,11 @@
 
     --container-gap-lg: #{px-to-rem(60)};
     --container-gap-md: #{px-to-rem(48)};
+    --container-gap-sm: #{px-to-rem(32)};
+
+    --col-to-row-gap-sm: #{px-to-rem(12)};
+    --col-to-row-gap-md: #{px-to-rem(18)};
+    --col-to-row-gap-lg: #{px-to-rem(24)};
   }
 
   @include breakpoint(xl) {
@@ -40,5 +59,6 @@
     --heading-gap-2xl: #{px-to-rem(100)};
     --container-gap-lg: #{px-to-rem(80)};
     --container-gap-md: #{px-to-rem(64)};
+    --container-gap-sm: #{px-to-rem(48)};
   }
 }
