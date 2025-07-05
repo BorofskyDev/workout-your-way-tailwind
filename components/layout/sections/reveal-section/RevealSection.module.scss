@@ -1,0 +1,67 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/functions' as *;
+
+.revealSection {
+  width: var(--full-percent);
+  display: grid;
+  grid-template-columns: 100%;
+  gap: var(--container-gap-lg);
+
+ 
+
+  .toggle {
+    @include flex-center(row, var(--element-gap-sm));
+    width: var(--full-percent);
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:focus-visible {
+      @include focused;
+    }
+
+    &:hover, &:focus-visible { 
+        .heading { 
+            color: var(--link-text-hover);
+        }
+
+        .icon {
+            fill: var(--link-text-hover);
+            stroke: var(--link-text-hover);
+        }
+    }
+
+    .heading {
+        color: var(--link-text);
+        
+    }
+
+    .icon {
+      width: var(--icon-w-xl);
+      height: var(--icon-h-xl);
+      transition: var(--transition-main);
+      transform: rotate(90deg);
+      fill: var(--link-text);
+      stroke: var(--link-text);
+    }
+
+    .iconOpen {
+      transition: var(--transition-main);
+      transform: rotate(-90deg);
+    }
+  }
+
+  .reveal {
+    width: var(--full-percent);
+    overflow: hidden;
+    display: grid;
+    gap: var(--container-gap-lg);
+
+    @include breakpoint(md) {
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+    }
+  
+  }
+}

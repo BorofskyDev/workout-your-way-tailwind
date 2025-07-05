@@ -1,9 +1,8 @@
 import { User } from '@prisma/client'
-import { PageContainer } from '@/components/layout'
+import {  PageContainer } from '@/components/layout'
 import { Heading } from '@/components/ui'
-
+import { DailyView, ProgramManagementDisclosure } from './profile-page-components'
 import styles from './ProfilePage.module.scss'
-import { DailyView } from './profile-page-components'
 
 type ProfilePageProps = {
   user: User
@@ -16,6 +15,7 @@ export async function ProfilePageComponent({ user }: ProfilePageProps) {
         Welcome, {user.name}
       </Heading>
       <DailyView />
+     <ProgramManagementDisclosure />
     </PageContainer>
   )
 }

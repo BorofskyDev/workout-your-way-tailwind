@@ -2,15 +2,29 @@
 @use '@/styles/functions' as *;
 
 :root {
-    --full-percent: 100%;
-    --full-dynamic: 100dvw;
+  --full-percent: 100%;
+  --full-dynamic: 100dvw;
 
-    --page-max: #{px-to-rem(1280)};
+  --page-max: #{px-to-rem(1280)};
 
-    --paragraph-max: #{px-to-ch(680)};
+  --paragraph-max: #{px-to-ch(680)};
 
-    --btn-w-xl: #{px-to-rem(260)};
-    --btn-w-lg: #{px-to-rem(200)};
-    --btn-w-md: #{px-to-rem(180)};
-    --btn-w-sm: #{px-to-rem(160)};
+  --btn-w-xl: #{px-to-rem(260)};
+  --btn-w-lg: #{px-to-rem(200)};
+  --btn-w-md: #{px-to-rem(180)};
+  --btn-w-sm: #{px-to-rem(160)};
+
+  --icon-w-xs: #{px-to-rem(24)};
+  --icon-w-sm: #{px-to-rem(32)};
+  --icon-w-md: #{px-to-rem(40)};
+  --icon-w-lg: #{px-to-rem(48)};
+  --icon-w-xl: #{px-to-rem(56)};
+
+  @include breakpoint(lg) {
+    --icon-w-xs: #{px-to-rem(32)};
+    --icon-w-sm: #{px-to-rem(40)};
+    --icon-w-md: #{px-to-rem(48)};
+    --icon-w-lg: #{px-to-rem(64)};
+    --icon-w-xl: #{px-to-rem(72)};
+  }
 }

@@ -29,8 +29,8 @@
   @include flex-center(row, var(--gap-8));
 
   & svg {
-    height: #{px-to-rem(48)};
-    width: #{px-to-rem(48)};
+    height: var(--icon-h-lg);
+    width: var(--icon-w-lg);
     fill: $strokeColor;
     stroke: $strokeColor;
   }
@@ -69,12 +69,6 @@
       var(--stroke-primary),
       var(--bg-primary-btn-hover)
     );
-    color: var(--link-text);
-
-    &:focus-visible,
-    &:hover {
-      color: var(--link-text-hover);
-    }
   }
 
   @if $level == 3 {
@@ -82,10 +76,10 @@
       var(--btn-w-md),
       var(--btn-padding-md),
       var(--border-secondary),
-      var(--bg-secondary-btn),
+      var(--bg-btn-primary),
       var(--fs-400),
-      var(--stroke-secondary),
-      var(--bg-secondary-btn-hover)
+      var(--stroke-cta),
+      var(--bg-btn-primary-hover)
     );
   }
 
@@ -98,6 +92,6 @@
       var(--fs-300),
       var(--stroke-link),
       var(--bg-link-hover)
-    )
+    );
   }
 }

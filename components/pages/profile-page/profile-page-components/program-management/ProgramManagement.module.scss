@@ -1,0 +1,10 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/functions' as *;
+
+.info {
+  @include flex-center(column, var(--element-gap-sm));
+}
+
+.actions {
+  @include flex-center(column, var(--element-gap-lg));
+}

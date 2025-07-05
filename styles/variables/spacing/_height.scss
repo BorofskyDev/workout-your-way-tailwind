@@ -4,4 +4,18 @@
 :root {
     --full-percent: 100%;
     --full-dynamic: 100dvh;
+
+   --icon-h-xs: #{px-to-rem(24)};
+   --icon-h-sm: #{px-to-rem(32)};
+    --icon-h-md: #{px-to-rem(40)};
+    --icon-h-lg: #{px-to-rem(48)};
+    --icon-h-xl: #{px-to-rem(56)};
+
+    @include breakpoint(lg) {
+        --icon-h-xs: #{px-to-rem(32)};
+        --icon-h-sm: #{px-to-rem(40)};
+        --icon-h-md: #{px-to-rem(48)};
+        --icon-h-lg: #{px-to-rem(64)};
+        --icon-h-xl: #{px-to-rem(72)};
+    }
 }
